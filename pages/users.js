@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Table, Container, Row, Col } from "reactstrap";
 
-import axios from "axios";
+import { axios } from "../lib/axios/axios.js";
 
 // icons
 import EditIcon from "@material-ui/icons/Edit";
@@ -11,8 +11,8 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get("/mocks/usuarios.json").then(function (response) {
-      setUsers(response.data);
+    axios.get("/api/v1/users").then(function (response) {
+      setUsers(response.data.users);
     });
   }, []);
 
@@ -25,16 +25,15 @@ const Users = () => {
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Last Name</th>
+                  <th>Surname</th>
                   <th>Email</th>
                   <th>Adress</th>
                   <th>DNI</th>
-                  <th>Activation Date</th>
+                  <th className="text-nowrap">Activation Date</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
               </thead>
-
               <tbody>
                 {users.map((user) => (
                   <tr key={user.id}>

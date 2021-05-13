@@ -1,5 +1,10 @@
-import { useState, useEffect } from "react";
 import Head from "next/head";
+
+import { useState } from "react";
+
+// router
+import { useRouter } from "next/router";
+
 import {
   Card,
   CardText,
@@ -23,8 +28,6 @@ import * as yup from "yup";
 // import axios instance
 import { axios } from "../lib/axios/axios.js";
 
-// TODO: Move all axios logic to separate file, and export axios instance to use across all the app
-
 // formik initial values + yup validation
 const initialValues = {
   user: "",
@@ -47,13 +50,15 @@ const schema = yup.object().shape({
 });
 
 export default function Home() {
+  const router = useRouter();
+
   const handleSubmit = (values) => {
     axios
       .post("/api/v1/login", values)
       .then(function (response) {
         console.log(response.data.jwt);
         localStorage.setItem("JWT", response.data.jwt);
-        // TODO: Router push to /users
+        router.push("/users");
         // TODO: Display spinner in primary button
       })
       .catch((err) => {
