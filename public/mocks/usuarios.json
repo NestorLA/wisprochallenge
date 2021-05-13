@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Marty",
+    "lastname": "McFly",
+    "email": "martymcfly@april.biz",
+    "dni": "35656989",
+    "signupdate": "Mon May 10 2021 16:51:45",
+    "adress": "Arkansas 1515"
+  },
+  {
+    "id": 2,
+    "name": "Biff",
+    "lastname": "Tannen",
+    "email": "bifftannen@april.biz",
+    "dni": "38944419",
+    "signupdate": "Mon May 3 2021 12:11:25",
+    "adress": "Milwaukee 45"
+  },
+  {
+    "id": 3,
+    "name": "Emmet",
+    "lastname": "Brown",
+    "email": "emmet_brown@april.biz",
+    "dni": "1547863",
+    "signupdate": "Mon Mar 26 2021 16:51:45",
+    "adress": "Riverside Drive 1640"
+  },
+  {
+    "id": 4,
+    "name": "Lorraine",
+    "lastname": "Baines",
+    "email": "lorrainecalvinklein@april.biz",
+    "dni": "14577891",
+    "signupdate": "Mon May 10 2021 09:12:18",
+    "adress": "Lyon Drive 9303"
+  },
+  {
+    "id": 5,
+    "name": "George",
+    "lastname": "Mcfly",
+    "email": "georgevanhalen@april.biz",
+    "dni": "13571891",
+    "signupdate": "Mon May 3 2021 11:11:11",
+    "adress": "Lyon Drive 3564"
+  }
+]
