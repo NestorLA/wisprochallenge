@@ -52,7 +52,10 @@ const schema = yup.object().shape({
 export default function Home() {
   const router = useRouter();
 
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = (values) => {
+    setLoading(true);
     axios
       .post("/api/v1/login", values)
       .then(function (response) {
@@ -63,7 +66,8 @@ export default function Home() {
       })
       .catch((err) => {
         console.log(err);
-      });
+      })
+      .finally(setLoading(false));
   };
 
   return (

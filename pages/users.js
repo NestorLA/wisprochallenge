@@ -21,7 +21,7 @@ const Users = () => {
       <Container fluid>
         <Row className="mt-4 justify-content-center">
           <Col xs="12" sm="12" md="11" lg="10" xl="10">
-            <Table dark hover>
+            <Table bordered hover>
               <thead>
                 <tr>
                   <th>Name</th>
